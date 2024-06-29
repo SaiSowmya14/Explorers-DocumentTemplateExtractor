@@ -214,8 +214,6 @@ def reverse_eng(lable, documents, pdf_list, output1,maximum):
   #print(output_pdf)
   #print(d1)
 
-d
-
 reverse_eng('Deposit Receipt', documents, pdf_list, "deposit_receipt",16)
 reverse_eng('Renewal Notice', documents, pdf_list, "renewal_notice",16)
 reverse_eng('Initial Premium Receipt', documents, pdf_list, "Initial_Premium_Receipt",12)
