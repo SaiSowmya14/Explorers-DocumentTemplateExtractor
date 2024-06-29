@@ -196,15 +196,15 @@ def reverse_eng(lable, documents, pdf_list, output1,maximum):
   # to get the document name which is having all the check list items
   count=0
   index=0
-  maximum=0
+  more=0
   for j in l:
     p=list(documents[j].split('\n'))
     #print(p)
     for i in p:
       if i in check_list:
         count += 1
-    if count==0 or count>maximum:
-      maximum=count
+    if count==0 or count>more:
+      more=count
       index=j
     count=0
   #print(index)
