@@ -83,7 +83,7 @@ from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
 def preprocess_text(text):
   # Convert to lowercase
   text = text.lower()
-  # Remove punctuation and digits
+  # Remove punctuation
   text = re.sub(r'[\W]', ' ', text)
   return text
 
@@ -177,8 +177,6 @@ def remove_text_from_pdf(input_pdf,output_pdf,text_to_remove):
 
 def reverse_eng(lable, documents, pdf_list, output1,maximum):
   l=list(df.index[df['labels']==lable])
-  p=list(documents[12].split())
-  d1={}
   for j in l:
     p=list(documents[j].split('\n'))
     for i in p:
@@ -195,6 +193,7 @@ def reverse_eng(lable, documents, pdf_list, output1,maximum):
       not_check_list.append(i)
   #print(check_list)
   #print(not_check_list)
+  # to get the document name which is having all the check list items
   count=0
   index=0
   maximum=0
